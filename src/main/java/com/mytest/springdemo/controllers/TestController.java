@@ -32,7 +32,7 @@ public class TestController {
 	@RequestMapping(value = "/employee/list", method = RequestMethod.GET)
 	public Employee[] firstPage() {
 
-		Employee emp[] = new Employee[2]; 
+		Employee emp[] = new Employee[3]; 
 			emp[0]=	new Employee();
 		
 		emp[0].setName("emp1");
@@ -44,7 +44,11 @@ public class TestController {
 			emp[1].setDesignation("individual contributor");
 			emp[1].setEmpId("2");
 			emp[1].setSalary(2000);
-		
+			emp[2] = new Employee();
+			emp[2].setName("emp3");
+			emp[2].setDesignation("individual contributor");
+			emp[2].setEmpId("3");
+			emp[2].setSalary(2000);
 
 		return emp;
 	}
